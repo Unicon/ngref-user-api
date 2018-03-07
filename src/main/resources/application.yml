@@ -1,0 +1,15 @@
+server:
+  port: 8444
+  ssl:
+    key-password: changeit
+    key-store: classpath:thekeystore
+    key-store-provider: SUN
+    key-store-type: JKS
+    key-alias: cas
+
+
+logging:
+  level:
+    root: INFO
+    com.wiley.wpng.ref.api: DEBUG
+    org.jose4j.jwt: TRACE
