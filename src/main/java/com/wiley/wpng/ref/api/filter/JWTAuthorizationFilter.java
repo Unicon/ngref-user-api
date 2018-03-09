@@ -3,16 +3,11 @@ package com.wiley.wpng.ref.api.filter;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.jose4j.jwk.HttpsJwks;
-import org.jose4j.jwt.GeneralJwtException;
 import org.jose4j.jwt.JwtClaims;
-
-import org.jose4j.jwt.MalformedClaimException;
-import org.jose4j.jwt.consumer.InvalidJwtException;
 import org.jose4j.jwt.consumer.JwtConsumer;
 import org.jose4j.jwt.consumer.JwtConsumerBuilder;
 import org.jose4j.jwt.consumer.JwtContext;
 import org.jose4j.keys.resolvers.HttpsJwksVerificationKeyResolver;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -37,17 +32,16 @@ public class JWTAuthorizationFilter extends BasicAuthenticationFilter {
     public static final String HEADER_STRING = "Authorization";
     public static final String TOKEN_PREFIX = "Bearer ";
 
-    private String auth0JwksEndpoint = "https://parkerneff.auth0.com/.well-known/jwks.json";
 
 
     // Get the key resolver from the jwks endpoint
-    HttpsJwks httpsJkws = new HttpsJwks("https://localhost:8443/cas/oidc/jwks");
+   // HttpsJwks httpsJkws = new HttpsJwks("https://localhost:8443/cas/oidc/jwks");
 
-    HttpsJwksVerificationKeyResolver httpsJwksKeyResolver = new HttpsJwksVerificationKeyResolver(httpsJkws);
+  //  HttpsJwksVerificationKeyResolver httpsJwksKeyResolver = new HttpsJwksVerificationKeyResolver(httpsJkws);
 
 
-    String issuer = "http://localhost:8080/cas/oidc";
-    String audience = "reference_client";
+  //  String issuer = "http://localhost:8080/cas/oidc";
+  //  String audience = "reference_client";
 
     //    public JWTAuthorizationFilter(AuthenticationManager authManager) {
 //        super(authManager);

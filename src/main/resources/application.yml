@@ -13,3 +13,8 @@ logging:
     root: INFO
     com.wiley.wpng.ref.api: DEBUG
     org.jose4j.jwt: TRACE
+
+oidc:
+  oidcIssuers:
+    http://localhost:8080/cas/oidc: https://localhost:8443/cas/oidc/jwks
+    https://parkerneff.auth0.com/: https://parkerneff.auth0.com/.well-known/jwks.json
