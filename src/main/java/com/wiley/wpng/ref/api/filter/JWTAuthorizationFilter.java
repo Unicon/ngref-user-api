@@ -94,8 +94,8 @@ public class JWTAuthorizationFilter extends BasicAuthenticationFilter {
                         .setRequireExpirationTime() // the JWT must have an expiration time
                         .setAllowedClockSkewInSeconds(30) // allow some leeway in validating time based claims to account for clock skew
                         .setRequireSubject() // the JWT must have a subject claim
-                        .setExpectedIssuer(issuer) // whom the JWT needs to have been issued by
-                        .setExpectedAudience(audience) // to whom the JWT is intended for
+                        .setSkipDefaultAudienceValidation() // TODO Determine if audience check really is required
+                        //.setExpectedAudience(false, "tiOFA1XX0w6g4exs1FQVEBkcCTcr7zEu") // to whom the JWT is intended for
                         .setVerificationKeyResolver(getJwtKeyResolver(token))
                         .build(); // create the JwtConsumer instance
 
