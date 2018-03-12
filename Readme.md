@@ -1,8 +1,12 @@
+# Wiley NextGEN User API Reference Implementation
 
-https://auth0.com/blog/implementing-jwt-authentication-on-spring-boot/
+## Build and Run
+    mvn spring-boot:run
+    
+Test the service is running 
+Point your browser to 
+   https://localhost:8444/status    
 
-https://github.com/nydiarra/springboot-jwt
+ 
 
-
-
-https://bitbucket.org/b_c/jose4j/wiki/JWT%20Examples#markdown-header-using-jwks
+ 
